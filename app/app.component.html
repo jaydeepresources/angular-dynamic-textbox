@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <button type="button" name="addItem" (click)="onAddItem()">+</button>
+  <div>
+    <input type="text" name="text{{i}}" placeholder="Text Value" *ngFor="let t of textboxs;let i=index" [(ngModel)]="textData[i]"
+    />
+  </div>
+  <div>
+    <button type="button" name="showdata" (click)="onShow()">Show</button>
+    <br/>
+    <span *ngFor="let tdata of textData">{{tdata}}</span>
+  </div>
+
+  
+  
+</div>
